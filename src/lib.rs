@@ -28,6 +28,18 @@ fn scale_channel<T: Bounded + NumCast, F: Float + NumCast + Div>(channel: T) -> 
 }
 
 /// Calculate contrast between two colors as specified by [WCAG 2](http://www.w3.org/TR/WCAG20#contrast-ratiodef)
+///
+/// # Usage
+///
+/// ```rust
+/// use contrast::contrast;
+/// use rgb::RGB8;
+///
+/// fn main() {
+///     let contrast: f32 = contrast(RGB8::from([255, 255, 255]), RGB8::from([255, 255, 0]));
+///     assert_eq!(contrast, 1.0738392);
+/// }
+/// ```
 pub fn contrast<T: Bounded + NumCast, F: Float + NumCast + Div>(a: RGB<T>, b: RGB<T>) -> F {
     let luminance_a: F = luminance::<T, F>(a) + cast::<_, F>(0.05).unwrap();
     let luminance_b: F = luminance::<T, F>(b) + cast::<_, F>(0.05).unwrap();
