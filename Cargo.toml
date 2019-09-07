@@ -3,6 +3,10 @@ name = "contrast"
 version = "0.1.0"
 authors = ["Robin Appelman <robin@icewind.nl>"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/icewind1991/contrast-rs"
+documentation = "https://docs.rs/contrast/"
 
 [dependencies]
 rgb = "0.8"
