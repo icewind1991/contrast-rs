@@ -1,3 +1,5 @@
+# Moved to https://codeberg.org/icewind/contrast
+
 # Contrast
 
 Calculate contrast between two colors as specified by [WCAG 2](http://www.w3.org/TR/WCAG20#contrast-ratiodef)
